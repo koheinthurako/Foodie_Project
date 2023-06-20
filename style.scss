@@ -1,2 +1,84 @@
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$navbar-nav-link-padding-x : 1.5rem;
+
+$primary : #138233;
+
+$btn-font-size-lg: .75rem;
+$btn-padding-x-lg: 1rem;
+$btn-padding-y-lg: 0.75rem;
+
+$btn-font-size: 1rem;
+$btn-padding-x: 1.5rem;
+$btn-padding-y: 0.7rem;
+
+$border-radius : 0.5rem;
+$border-radius-lg : 0.75rem;
+
+
 @import "./node_modules/bootstrap-icons/font/bootstrap-icons.css";
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import "./node_modules/animate.css/animate.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    transition: transform 0.3s; // Transition ကို Transform အတွက်ပဲလုပ်ခြင်း
+}
+
+.nav-link.active {
+    color: white !important;
+}
+
+.brand-icon {
+    height: 40px;
+    transition: 0.5s;
+}
+
+// .brand-icon:hover {
+//     transform: rotate(350deg);
+// }
+
+// .site-navbar:hover .brand-icon {
+//     transform: rotate(350deg);
+// }
+
+// Nesting below
+.site-navbar {
+    &:hover .brand-icon{
+        transform: rotate(360deg);
+    }
+    &:hover .nav-link.active{
+        transform: translateY(-3px);
+    }
+}
+
+.brand-name {
+
+}
+
+.service {
+    svg {
+        fill: $primary;
+    }
+}
+
+.plate-card {
+    transition: 0.3s;
+
+    img {
+        transition: 0.3s;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: $box-shadow ;
+    }
+
+    &:hover img {
+        transform: rotate(45deg);
+    }
+}
